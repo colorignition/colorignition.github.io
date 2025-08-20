@@ -1,0 +1,37 @@
+html {
+	font-family: Helvetica;
+}
+
+body {
+	padding: 2%;
+
+	background-color: rgb(250, 80, 80);
+}
+
+div {
+	padding: 2%;
+
+	background-color: rgb(50, 50, 50);
+}
+
+h1, h2, p {
+	color: white;
+}
+
+a {
+	color: lightblue;
+}
+
+a:hover {
+	color: white;
+}
+
+ul {
+	padding: 0px 15px;
+}
+
+ul li{
+	color: white;
+	margin: 3px;
+	padding: 3px 0px;
+}
