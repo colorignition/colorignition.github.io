@@ -36,7 +36,7 @@ function calculateAll() {
 	let baseValue = Number(document.getElementById("input").value);
 
 	if(!baseValue) {
-		alert("Invalid input. Please make sure input is a number.")
+		document.getElementById("output").textContent = "Invalid input. Please make sure input is a number.";
 	} else {
 		calculateValue(baseValue, "eur");
 		calculateValue(baseValue, "cad");
@@ -45,6 +45,7 @@ function calculateAll() {
 		calculateValue(baseValue, "pes");
 
 		updateValue()
+		document.getElementById("output").textContent = "Output was successful!";
 	}
 }
 

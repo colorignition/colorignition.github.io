@@ -15,14 +15,14 @@ body {
 
 h1 {
 	font-size: 48px;
-	padding: 9px 0;
-	margin: 0;
+	margin: 9px 0;
+	padding: 0;
 }
 
 h2 {
 	font-size: 32px;
-	padding: 12px 0;
-	margin: 0;
+	margin: 12px 0;
+	padding: 0;
 }
 
 /* - Structures */
@@ -39,6 +39,10 @@ ul li{
 
 table {
 	text-align: left;
+}
+
+th {
+	font-size: 22px;
 }
 
 th, td {
@@ -146,6 +150,7 @@ input:focus {
 
 .div-pad {
 	padding: 16px 20px;
+	background-color:rgb(75, 75, 85);
 }
 
 .input-button {
