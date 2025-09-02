@@ -13,80 +13,82 @@
 </head>
 
 <body>
-	<!-- Side Nav -->
-	<script id="navbar" src="/nav.js"></script>
+	<div class="container">
+		<!-- Side Nav -->
+		<script id="navbar" src="/nav.js"></script>
 
-	<!-- Main -->
-	<div class="main">
-		<h1>Assignment 2 Part 2</h1>
-		<a href="/hw2/index.html">🡸 Back to Assignment 2 List</a>
+		<!-- Main -->
+		<div class="main">
+			<h1>Assignment 2 Part 2</h1>
+			<a href="/hw2/index.html">🡸 Back to Assignment 2 List</a>
 
-		<p>This form accepts three numbers and provides the <b>sum, average, and product</b> of the three numbers, as well as provides the <b>smallest and largest</b> of the three numbers.</p>
+			<p>This form accepts three numbers and provides the <b>sum, average, and product</b> of the three numbers, as well as provides the <b>smallest and largest</b> of the three numbers.</p>
 
-		<h2>Input</h2>
-		<form name="form">
-			<table>
-				<tr>
-					<td><label for="num1">1st Number</label></td>
-					<td><input type="text" name="num1" id="num1"></td>
-				</tr>
+			<h2>Input</h2>
+			<form name="form">
+				<table>
+					<tr>
+						<td><label for="num1">1st Number</label></td>
+						<td><input type="text" name="num1" id="num1"></td>
+					</tr>
 
-				<tr>
-					<td><label for="num2">2nd Number</label></td>
-					<td><input type="text" name="num2" id="num2"></td>
-				</tr>
+					<tr>
+						<td><label for="num2">2nd Number</label></td>
+						<td><input type="text" name="num2" id="num2"></td>
+					</tr>
 
-				<tr>
-					<td><label for="num3">3rd Number</label></td>
-					<td><input type="text" name="num3" id="num3"></td>
-				</tr>
-			</table>
+					<tr>
+						<td><label for="num3">3rd Number</label></td>
+						<td><input type="text" name="num3" id="num3"></td>
+					</tr>
+				</table>
 
-			<script src="part2.js"></script>
-			<input type="button" class="input-button" value="Submit" 
-					onclick="processForm()">
+				<script src="part2.js"></script>
+				<input type="button" class="input-button" value="Submit" 
+						onclick="processForm()">
 
-			<input type="reset" class="input-button" value="Reset">
+				<input type="reset" class="input-button" value="Reset">
+
+				<br>
+
+			</form>
+
+			<h2>Output</h2>
+			<div class="div-pad" style="background-color:rgb(75, 75, 85);">
+				<p id="output">Awaiting input...</p>
+			</div>
 
 			<br>
 
-		</form>
+			<table>
+				<tr>
+					<td>Sum</td>
+					<td><input type="text" id="out_sum" readonly></td>
+				</tr>
 
-		<h2>Output</h2>
-		<div class="div-pad" style="background-color:rgb(75, 75, 85);">
-			<p id="output">Awaiting input...</p>
+				<tr>
+					<td>Average</td>
+					<td><input type="text" id="out_avg" readonly></td>
+				</tr>
+
+				<tr>
+					<td>Product</td>
+					<td><input type="text" id="out_prd" readonly></td>
+				</tr>
+
+				<tr>
+					<td>Smallest</td>
+					<td><input type="text" id="out_min" readonly></td>
+				</tr>
+
+				<tr>
+					<td>Largest</td>
+					<td><input type="text" id="out_max" readonly></td>
+				</tr>
+			</table>
+
+
 		</div>
-
-		<br>
-
-		<table>
-			<tr>
-				<td>Sum</td>
-				<td><input type="text" id="out_sum" readonly></td>
-			</tr>
-
-			<tr>
-				<td>Average</td>
-				<td><input type="text" id="out_avg" readonly></td>
-			</tr>
-
-			<tr>
-				<td>Product</td>
-				<td><input type="text" id="out_prd" readonly></td>
-			</tr>
-
-			<tr>
-				<td>Smallest</td>
-				<td><input type="text" id="out_min" readonly></td>
-			</tr>
-
-			<tr>
-				<td>Largest</td>
-				<td><input type="text" id="out_max" readonly></td>
-			</tr>
-		</table>
-
-
 	</div>
 </body>
 

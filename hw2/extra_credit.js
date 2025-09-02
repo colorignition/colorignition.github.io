@@ -35,13 +35,17 @@ function calculateValue(baseValue, moneyType){
 function calculateAll() {
 	let baseValue = Number(document.getElementById("input").value);
 
-	calculateValue(baseValue, "eur");
-	calculateValue(baseValue, "cad");
-	calculateValue(baseValue, "hkd");
-	calculateValue(baseValue, "jpy");
-	calculateValue(baseValue, "pes");
+	if(!baseValue) {
+		alert("Invalid input. Please make sure input is a number.")
+	} else {
+		calculateValue(baseValue, "eur");
+		calculateValue(baseValue, "cad");
+		calculateValue(baseValue, "hkd");
+		calculateValue(baseValue, "jpy");
+		calculateValue(baseValue, "pes");
 
-	updateValue()
+		updateValue()
+	}
 }
 
 updateRate()

@@ -20,67 +20,69 @@
 </head>
 
 <body>
-	<!-- Side Nav -->
-	<script id="navbar" src="/nav.js"></script>
+	<div class="container">
+		<!-- Side Nav -->
+		<script id="navbar" src="/nav.js"></script>
 
-	<!-- Main -->
-	<div class="main">
-		<h1>Assignment 2 Extra Credit</h1>
-		<a href="/hw2/index.html">🡸 Back to Assignment 2 List</a>
+		<!-- Main -->
+		<div class="main">
+			<h1>Assignment 2 Extra Credit</h1>
+			<a href="/hw2/index.html">🡸 Back to Assignment 2 List</a>
 
-		<p>This table shows the currency conversions from USD to other currencies.</p>
+			<p>This table shows the currency conversions from USD to other currencies.</p>
 
-		<form>
-		<table class="currency">
-			<tr>
-				<th>Currency</th>
-				<th>Rate</th>
-				<th>Value</th>
-			</tr>
+			<form>
+			<table class="currency">
+				<tr>
+					<th>Currency</th>
+					<th>Rate</th>
+					<th>Value</th>
+				</tr>
 
-			<tr>
-				<td>Euro</td>
-				<td id="rate_eur">0</td>
-				<td><input type="text" id="value_eur" readonly></td>
-			</tr>
+				<tr>
+					<td>Euro</td>
+					<td id="rate_eur">0</td>
+					<td><input type="text" id="value_eur" readonly></td>
+				</tr>
 
-			<tr>
-				<td>Canadian Dollar</td>
-				<td id="rate_cad">0</td>
-				<td><input type="text" id="value_cad" readonly></td>
-			</tr>
+				<tr>
+					<td>Canadian Dollar</td>
+					<td id="rate_cad">0</td>
+					<td><input type="text" id="value_cad" readonly></td>
+				</tr>
 
-			<tr>
-				<td>Hong Kong Dollar</td>
-				<td id="rate_hkd">0</td>
-				<td><input type="text" id="value_hkd" readonly></td>
-			</tr>
+				<tr>
+					<td>Hong Kong Dollar</td>
+					<td id="rate_hkd">0</td>
+					<td><input type="text" id="value_hkd" readonly></td>
+				</tr>
 
-			<tr>
-				<td>Japanese Yen</td>
-				<td id="rate_jpy">0</td>
-				<td><input type="text" id="value_jpy" readonly></td>
-			</tr>
+				<tr>
+					<td>Japanese Yen</td>
+					<td id="rate_jpy">0</td>
+					<td><input type="text" id="value_jpy" readonly></td>
+				</tr>
 
-			<tr>
-				<td>Mexican Pesos</td>
-				<td id="rate_pes">0</td>
-				<td><input type="text" id="value_pes" readonly></td>
-			</tr>
+				<tr>
+					<td>Mexican Pesos</td>
+					<td id="rate_pes">0</td>
+					<td><input type="text" id="value_pes" readonly></td>
+				</tr>
 
-			<tr>
-				<td><label for="input">Amount (USD)</label></td>
-				<td colspan="2"><input type="text" name="input" id="input" style="width:155px;"></td>
-			</tr>
-		</table>
+				<tr>
+					<td><label for="input">Amount (USD)</label></td>
+					<td colspan="2"><input type="text" name="input" id="input" style="width:155px;"></td>
+				</tr>
+			</table>
 
-		<input type="button" class="input-button" value="Submit" 
-			onclick="calculateAll()">
+			<input type="button" class="input-button" value="Submit" 
+				onclick="calculateAll()">
 
-		<input type="reset" class="input-button" value="Reset">
+			<input type="reset" class="input-button" value="Reset">
 
-		<script src="extra_credit.js"></script>
-		</form>
+			<script src="extra_credit.js"></script>
+			</form>
+		</div>
 	</div>
 </body>
 

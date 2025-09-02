@@ -1,29 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
 html {
-	font-family: Helvetica;
+	font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
 	background-color: rgb(250, 80, 80);
-	margin: 2% 10%;
-}
-
-div {
-	background-color: rgb(50, 50, 50);
 }
 
 * {
 	color: white;
 }
 
-a {
-	color: lightpink;
-	text-decoration: none;
-	font-weight: bold;
+h1 {
+	font-size: 48px;
+	padding: 9px 0;
+	margin: 0;
 }
 
-a:hover {
-	color: white;
+h2 {
+	font-size: 32px;
+	padding: 12px 0;
+	margin: 0;
 }
+
+/* - Structures */
 
 ul {
 	list-style-type: none;
@@ -36,7 +38,6 @@ ul li{
 }
 
 table {
-	padding: 0;
 	text-align: left;
 }
 
@@ -44,6 +45,18 @@ th, td {
 	padding-right: 24px;
 	padding-bottom: 12px;
 	vertical-align: top;
+}
+
+/* - Interactables */
+
+a {
+	color: lightpink;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: white;
 }
 
 input {
@@ -60,39 +73,44 @@ input:focus {
 	background-color: rgb(60, 60, 60);
 }
 
-.div-pad {
-	padding: 16px 20px;
-}
+/* CLASSES */
 
-.input-button {
-	margin-right: 6px;
-	padding: 6px 24px;
+.container {
+	margin: 2% 12%;
+	background-color: rgb(30, 30, 30);
 }
 
 .main {
-	margin-left: 23%;
+	margin-left: 16%;
 	padding: 10px 5%;
 	padding-bottom: 40px;
+
+	background-color: rgb(50, 50, 50);
 }
 
+/* - Navigation */
+
 .nav {
-	padding: 0;
-	margin: 0;
-	background-color: rgb(30, 30, 30);
-	
 	position: fixed;
-	width: 18.5%;
+	width: 12.06%;
 	
 	z-index: 1;
+
+	background-color: rgb(30, 30, 30);
 }
 
 .nav ul {
 	overflow: hidden;
 }
 
-.nav a {
+.nav a, .nav p {
 	display: block;
+	font-size: 20px;
 	padding: 12px 18px;
+}
+
+.nav p {
+	margin: 2px 0;
 }
 
 .nav a:hover {
@@ -108,9 +126,8 @@ input:focus {
 	z-index: 2;
 	
 	position: absolute;
-	left: 90%;
+	left: 100%;
 	
-	padding: 12px;
 	min-width: 200px;
 
 	background-color: rgb(30, 30, 30);
@@ -123,4 +140,15 @@ input:focus {
 
 .nav-dropdown:hover .nav-dropdown-content {
   display: block;
+}
+
+/* - Misc */
+
+.div-pad {
+	padding: 16px 20px;
+}
+
+.input-button {
+	margin-right: 6px;
+	padding: 6px 24px;
 }
