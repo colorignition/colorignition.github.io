@@ -3,23 +3,22 @@ html {
 }
 
 body {
-	padding: 2%;
-
 	background-color: rgb(250, 80, 80);
+	margin: 2% 10%;
 }
 
 div {
-	padding: 2%;
-
 	background-color: rgb(50, 50, 50);
 }
 
-h1, h2, p {
+* {
 	color: white;
 }
 
 a {
-	color: lightblue;
+	color: lightpink;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 a:hover {
@@ -27,11 +26,101 @@ a:hover {
 }
 
 ul {
-	padding: 0px 15px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 ul li{
-	color: white;
-	margin: 3px;
-	padding: 3px 0px;
+	padding-bottom: 12px;
+}
+
+table {
+	padding: 0;
+	text-align: left;
+}
+
+th, td {
+	padding-right: 24px;
+	padding-bottom: 12px;
+	vertical-align: top;
+}
+
+input {
+	border-style: solid;
+	border-color: rgb(10, 10, 10);
+	background-color: rgb(30, 30, 30);
+}
+
+input:hover {
+	background-color: rgb(80, 80, 80);
+}
+
+input:focus {
+	background-color: rgb(60, 60, 60);
+}
+
+.div-pad {
+	padding: 16px 20px;
+}
+
+.input-button {
+	margin-right: 6px;
+	padding: 6px 24px;
+}
+
+.main {
+	margin-left: 23%;
+	padding: 10px 5%;
+	padding-bottom: 40px;
+}
+
+.nav {
+	padding: 0;
+	margin: 0;
+	background-color: rgb(30, 30, 30);
+	
+	position: fixed;
+	width: 18.5%;
+	
+	z-index: 1;
+}
+
+.nav ul {
+	overflow: hidden;
+}
+
+.nav a {
+	display: block;
+	padding: 12px 18px;
+}
+
+.nav a:hover {
+	background: rgb(250, 80, 80);
+}
+
+.nav img {
+	padding: 18px 0 0 18px;
+}
+
+.nav-dropdown-content {
+	display: none;
+	z-index: 2;
+	
+	position: absolute;
+	left: 90%;
+	
+	padding: 12px;
+	min-width: 200px;
+
+	background-color: rgb(30, 30, 30);
+}
+
+.nav-dropdown-content a {
+	display: block;
+	text-align: left;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
 }
