@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 3 Part 1</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Student grade calculator">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<!-- Side Nav -->
+		<script id="navbar" src="/nav.js"></script>
+
+		<!-- Main -->
+		<div class="main">
+			<h1>Assignment 3 Part 1</h1>
+			<a href="/hw3/index.html">🡸 Back to Assignment 3 List</a>
+
+			<h2>Student Grades</h2>
+			<p>A form with input boxes for Homework Average, Midterm Exam Score, Final Exam Score, and Participation. All inputs should be numbers. </p>
+			<p>The output area presents the student's final average (rounded to an integer) and final letter grade.</p>
+
+			<h2>Input Form</h2>
+			<form name="grades">
+				<script src="part1.js"></script>
+
+				<label for="in-avg">Homework Average</label>
+				<input type="text" name="in-avg" id="in-avg"> <br>
+
+				<label for="in-mid">Midterm Exam Score</label>
+				<input type="text" name="in-mid" id="in-mid"> <br>
+
+				<label for="in-fin">Final Exam Score</label>
+				<input type="text" name="in-fin" id="in-fin"> <br>
+
+				<label for="in-prt">Participation</label>
+				<input type="text" name="in-prt" id="in-prt"> <br>
+
+				<input type="button" class="input-button" class="in-go" value="Submit" 
+						onclick="processForm()"> 
+				<input type="reset" class="input-button" value="Reset"> <br>
+			</form>
+
+			<h2>Output</h2>
+			<div class="div-pad">
+				<p id="output">Awaiting input...</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

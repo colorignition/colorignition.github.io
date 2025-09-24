@@ -51,6 +51,14 @@ th, td {
 	vertical-align: top;
 }
 
+form label {
+	margin-right: 20px;
+}
+
+form input{
+	margin-bottom: 12px;
+}
+
 /* - Interactables */
 
 a {
@@ -86,10 +94,25 @@ input:focus {
 
 .main {
 	margin-left: 16%;
-	padding: 10px 5%;
+	padding: 10px 10%;
 	padding-bottom: 40px;
 
 	background-color: rgb(50, 50, 50);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.grid-item {
+    padding: 8px;
+    display: flex;
+}
+
+.grid-header {
+    font-weight: bold;
 }
 
 /* - Navigation */
