@@ -1,4 +1,4 @@
-var outmsg, yesno_block, num_block;
+var question, outmsg, yesno_block, num_block;
 var x, y;
 
 function hookElem() {
@@ -13,7 +13,8 @@ function getNewNum() {
 }
 
 function askUserMult() {
-	outmsg.textContent = "How much is " + x + " times " + y + "?";
+	question = "How much is " + x + " times " + y + "?";
+	outmsg.textContent = question;
 }
 
 function resetAsk(){
@@ -36,13 +37,13 @@ function processForm() {
 
 	// Check if number
 	if(isNaN(answer)) {
-		outmsg.textContent = "Error! Input not number."
+		outmsg.textContent = "Error! Input not number. " + question;
 	}
 	// Do operation
 	else {
 		// Check if correct
 		if(answer != x * y) {
-			outmsg.textContent = "No. Please try again."
+			outmsg.textContent = "No. Please try again. " + question;
 		} else {
 			outmsg.textContent = "Very good! Would you like to keep playing?"
 			yesno_block.style.display = "block";

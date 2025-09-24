@@ -5,104 +5,111 @@
 	<title>JavaScript/Ajax Programming Assignment 3 Part 2</title>
 
 	<meta charset="UTF-8">
-	<meta name="description" content="">
+	<meta name="description" content="Calculates the weekly earnings of a salesperson based on quantity of sold items.">
 	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
 	<meta name="author" content="colorignition">
 
 	<link rel="stylesheet" href="/styles.css">
+	<style>
+		.currency input{
+			text-align: right;
+		}
+	</style>
+
 	<script src="part2.js"></script>
+
+
 </head>
 
 <body>
-	<div class="container">
-		<!-- Side Nav -->
-		<script id="navbar" src="/nav.js"></script>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
 
-		<!-- Main -->
-		<div class="main">
-			<h1>Assignment 3 Part 2</h1>
-			<a href="/hw3/index.html">🡸 Back to Assignment 3 List</a>
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Salesperson Weekly Earnings</h1>
+			<h2>/ Assignment 3 Part 2</h2>
+		</header>
+		<a href="/hw3/index.html">🡸 Back to Assignment 3 List</a>
+		<br>
+		
+		<p>Calculates the weekly earnings of a salesperson based on quantity of sold items.</p>
 
-			<h2>Sales</h2>
-			<p>A form with input boxes for Homework Average, Midterm Exam Score, Final Exam Score, and Participation. All inputs should be numbers. The output area presents the student's final average (rounded to an integer) and final letter grade.</p>
+		<div class="grid-container" style="grid-template-columns:40% 60%">
+			<div>
+				<h2>Input</h2>
+				<form name="sales">
+					<p>For each item type, the quantity sold by the seller</p>
 
-			<h2>Input Form</h2>
-			<form name="sales">
-				
-				<p>For each item type, the quantity sold by the seller</p>
+					<label for="in-item1">Item 1</label>
+					<input type="number" name="in-item1" id="in-item1"> <br>
 
-				<label for="in-item1">Item 1</label>
-				<input type="number" name="in-item1" id="in-item1"> <br>
+					<label for="in-item2">Item 2</label>
+					<input type="number" name="in-item2" id="in-item2"> <br>
 
-				<label for="in-item2">Item 2</label>
-				<input type="number" name="in-item2" id="in-item2"> <br>
+					<label for="in-item3">Item 3</label>
+					<input type="number" name="in-item3" id="in-item3"> <br>
 
-				<label for="in-item3">Item 3</label>
-				<input type="number" name="in-item3" id="in-item3"> <br>
+					<label for="in-item4">Item 4</label>
+					<input type="number" name="in-item4" id="in-item4"> <br>
 
-				<label for="in-item4">Item 4</label>
-				<input type="number" name="in-item4" id="in-item4"> <br>
-
-				<input type="button" class="input-button" value="Submit" 
-						onclick="processForm()"> 
-				<input type="reset" class="input-button" value="Reset"> <br>
-			</form>
-
-			<h2>Output</h2>
-			<div class="div-pad" id="out-msg">Awaiting input...</div> <br>
-
-			<div class="grid-container grid-header"> <!-- Header -->
-				<div class="grid-item">Item #</div>
-				<div class="grid-item">Price</div>
-				<div class="grid-item">Qty Sold</div>
-				<div class="grid-item">Total $</div>
+					<input type="button" class="input-button" value="Submit" 
+							onclick="processForm()"> 
+					<input type="reset" class="input-button" value="Reset"> <br>
+				</form>
 			</div>
 
-			<div class="grid-container"> <!-- Row 1-->
-				<div class="grid-item">1</div>
-				<div class="grid-item" id="out-price1">$0.00</div>
-				<div class="grid-item"><input type="text" id="out-qty1" readonly></div>
-				<div class="grid-item"><input type="text" id="out-total1" readonly></div>
-			</div>
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad" id="out-msg">Awaiting input...</div> <br>
 
-			<div class="grid-container"> <!-- Row 2-->
-				<div class="grid-item">2</div>
-				<div class="grid-item" id="out-price2">$0.00</div>
-				<div class="grid-item"><input type="text" id="out-qty2" readonly></div>
-				<div class="grid-item"><input type="text" id="out-total2" readonly></div>
-			</div>
+				<div class="grid-container currency" style="margin-bottom:8px; grid-template-columns:10% 30% 30% 30%;"> 
+					<!-- Header -->
+					<div><h3>#</h3></div>
+					<div><h3>Price</h3></div>
+					<div><h3>Qty Sold</h3></div>
+					<div><h3>Total $</h3></div>
+					
+					<!-- Row 1 -->
+					<div>1</div>
+					<input type="text" id="out-price1" readonly>
+					<input type="text" id="out-qty1" readonly>
+					<input type="text" id="out-total1" readonly>
+					
+					<!-- Row 2 -->
+					<div>2</div>
+					<input type="text" id="out-price2" readonly>
+					<input type="text" id="out-qty2" readonly>
+					<input type="text" id="out-total2" readonly>
 
-			<div class="grid-container"> <!-- Row 3-->
-				<div class="grid-item">3</div>
-				<div class="grid-item" id="out-price3">$0.00</div>
-				<div class="grid-item"><input type="text" id="out-qty3" readonly></div>
-				<div class="grid-item"><input type="text" id="out-total3" readonly></div>
-			</div>
+					<!-- Row 3 -->
+					<div>3</div>
+					<input type="text" id="out-price3" readonly>
+					<input type="text" id="out-qty3" readonly>
+					<input type="text" id="out-total3" readonly>
+					
+					<!-- Row 2 -->
+					<div>4</div>
+					<input type="text" id="out-price4" readonly>
+					<input type="text" id="out-qty4" readonly>
+					<input type="text" id="out-total4" readonly>
+				</div>
 
-			<div class="grid-container"> <!-- Row 1-->
-				<div class="grid-item">4</div>
-				<div class="grid-item" id="out-price4">$0.00</div>
-				<div class="grid-item"><input type="text" id="out-qty4" readonly></div>
-				<div class="grid-item"><input type="text" id="out-total4" readonly></div>
-			</div>
+				<div class="grid-container currency" style="grid-template-columns:72% 30%"> 
+					<!-- Row Amt Sold-->
+					<div>Total Amount Sold</div>
+					<input type="text" id="out-totalAll" readonly>
+					 
+					<!-- Row Week Earn-->
+					<div>Total Weekly Earnings</div>
+					<input type="text" id="out-weekEarn" readonly>
+				</div>
 
-			<div class="grid-container"> <!-- Row Amt Sold-->
-				<div class="grid-item">Total Amount Sold</div>
-				<div class="grid-item"></div>
-				<div class="grid-item"></div>
-				<div class="grid-item"><input type="text" id="out-totalAll" readonly></div>
+				<script>setPriceDisplay()</script>
 			</div>
-
-			<div class="grid-container"> <!-- Row Week Earn-->
-				<div class="grid-item">Total Weekly Earnings</div>
-				<div class="grid-item"></div>
-				<div class="grid-item"></div>
-				<div class="grid-item"><input type="text" id="out-weekEarn" readonly></div>
-			</div>
-
-			<script>setPriceDisplay()</script>
 		</div>
-	</div>
+	</main>
 </body>
 
 </html>

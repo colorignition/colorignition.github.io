@@ -5,7 +5,7 @@
 	<title>JavaScript/Ajax Programming Assignment 3 Extra Credit</title>
 
 	<meta charset="UTF-8">
-	<meta name="description" content="">
+	<meta name="description" content="A program that will help an elementary school student learn multiplication.">
 	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
 	<meta name="author" content="colorignition">
 
@@ -14,39 +14,40 @@
 </head>
 
 <body>
-	<div class="container">
-		<!-- Side Nav -->
-		<script id="navbar" src="/nav.js"></script>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
 
-		<!-- Main -->
-		<div class="main">
-			<h1>Assignment 3 Extra Credit</h1>
-			<a href="/hw3/index.html">🡸 Back to Assignment 3 List</a>
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Multiplication Quizzer</h1>
+			<h2>/ Assignment 3 Extra Credit</h2>
+		</header>
+		<a href="/hw3/index.html">🡸 Back to Assignment 3 List</a>
+		<br>
+		
+		<p>A program that will help an elementary school student learn multiplication.</p>
 
-			<h2>Multiplication Quizzer</h2>
-			<p>A program that will help an elementary school student learn multiplication.</p>
+		<h2>Prompt</h2>
+		<div id="out-msg" class="div-pad"></div> <br>
 
-			<h2>Prompt</h2>
-			<div id="out-msg" class="div-pad"></div> <br>
+		<h2>Input Form</h2>
+		<form>
+			<div id="yesno" style="display:none"> 
+				<input type="button" class="input-button" value="Yes" onclick="resetAsk()"> 
+				<input type="button" class="input-button" value="No" onclick="exit()"> 
+			</div>
 
-			<h2>Input Form</h2>
-			<form>
-				<div id="yesno" style="display:none"> 
-					<input type="button" class="input-button" value="Yes" onclick="resetAsk()"> 
-					<input type="button" class="input-button" value="No" onclick="exit()"> 
-				</div>
+			<div id="nums" style="display:none">
+				<label for="in-answer">Answer</label>
+				<input type="number" name="in-answer" id="in-answer"> <br>
 
-				<div id="nums" style="display:none">
-					<label for="in-answer">Answer</label>
-					<input type="number" name="in-answer" id="in-answer"> <br>
-
-					<input type="button" class="input-button" value="Submit" 
-							onclick="processForm()"> 
-					<input type="reset" class="input-button" value="Reset">
-				</div>
-			</form>
-		</div>
-	</div>
+				<input type="button" class="input-button" value="Submit" 
+						onclick="processForm()"> 
+				<input type="reset" class="input-button" value="Reset">
+			</div>
+		</form>
+	</main>
 
 	<script>
 		hookElem();

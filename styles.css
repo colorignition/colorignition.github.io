@@ -1,40 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* GENERAL */
-html {
+* {
+	color: white;
 	font-family: "Roboto Condensed", sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-body {
+html {
 	background-color: rgb(250, 80, 80);
 }
 
-* {
-	color: white;
+body {
+	padding: 2% 16%;
+}
+
+main {
+	margin-left: 17.7%;
+	padding: 10px 10%;
+	padding-bottom: 40px;
+
+	background-color: rgb(50, 50, 50);
 }
 
 h1 {
 	font-size: 48px;
-	margin: 9px 0;
-	padding: 0;
 }
 
 h2 {
 	font-size: 32px;
-	margin: 12px 0;
-	padding: 0;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, p {
+	margin: 9px 0;
+}
+
+header{
+	display: flex;
+	align-items: flex-end;
+}
+
+header h2, header h3 {
+	color: rgb(160, 160, 160);
+	margin: 12px;
 }
 
 /* - Structures */
 
 ul {
 	list-style-type: none;
-	padding: 0;
-	margin: 0;
 }
 
 ul li{
 	padding-bottom: 12px;
+}
+
+label {
+	margin-right: 20px;
+	font-size: 16px;
+}
+
+input {
+	margin-bottom: 8px;
+	font-size: 16px;
 }
 
 table {
@@ -49,14 +86,6 @@ th, td {
 	padding-right: 24px;
 	padding-bottom: 12px;
 	vertical-align: top;
-}
-
-form label {
-	margin-right: 20px;
-}
-
-form input{
-	margin-bottom: 12px;
 }
 
 /* - Interactables */
@@ -85,70 +114,68 @@ input:focus {
 	background-color: rgb(60, 60, 60);
 }
 
-/* CLASSES */
-
-.container {
-	margin: 2% 12%;
-	background-color: rgb(30, 30, 30);
+/* Hide the spin buttons in WebKit browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.main {
-	margin-left: 16%;
-	padding: 10px 10%;
-	padding-bottom: 40px;
+/* Hide spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
-	background-color: rgb(50, 50, 50);
+/* CLASSES */
+
+.link-button a {
+	display: block;
+}
+
+.link-button a, input[type=button], input[type=reset]{
+	background-color: rgb(30, 30, 30);
+	border: none;
+	padding: 12px 18px;
+	text-align: left;
+}
+
+.link-button a:hover, input[type=button]:hover, input[type=reset]:hover{
+	background-color: rgb(250, 80, 80);
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-}
-
-.grid-item {
-    padding: 8px;
-    display: flex;
-}
-
-.grid-header {
-    font-weight: bold;
+    gap: 6px;
 }
 
 /* - Navigation */
 
-.nav {
+nav {
 	position: fixed;
 	width: 12.06%;
 	
 	z-index: 1;
 
 	background-color: rgb(30, 30, 30);
+
+	font-size: 20px;
 }
 
-.nav ul {
+nav ul {
 	overflow: hidden;
 }
 
-.nav a, .nav p {
+nav p {
 	display: block;
-	font-size: 20px;
 	padding: 12px 18px;
-}
-
-.nav p {
 	margin: 2px 0;
 }
 
-.nav a:hover {
-	background: rgb(250, 80, 80);
-}
-
-.nav img {
+nav img {
 	padding: 18px 0 0 18px;
 }
 
-.nav-dropdown-content {
+nav .dropdown-content {
 	display: none;
 	z-index: 2;
 	
@@ -160,12 +187,12 @@ input:focus {
 	background-color: rgb(30, 30, 30);
 }
 
-.nav-dropdown-content a {
+nav .dropdown-content a {
 	display: block;
 	text-align: left;
 }
 
-.nav-dropdown:hover .nav-dropdown-content {
+nav .dropdown:hover .dropdown-content {
   display: block;
 }
 

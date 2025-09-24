@@ -4,10 +4,10 @@ var item3_value = 9.95;
 var item4_value = 35.89;
 
 function setPriceDisplay() {
-	document.getElementById("out-price1").textContent = "$" + item1_value;
-	document.getElementById("out-price2").textContent = "$" + item2_value;
-	document.getElementById("out-price3").textContent = "$" + item3_value;
-	document.getElementById("out-price4").textContent = "$" + item4_value;
+	document.getElementById("out-price1").value = "$" + item1_value;
+	document.getElementById("out-price2").value = "$" + item2_value;
+	document.getElementById("out-price3").value = "$" + item3_value;
+	document.getElementById("out-price4").value = "$" + item4_value;
 }
 
 function numToUSD(value) {
