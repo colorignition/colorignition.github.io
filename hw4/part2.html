@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 4 Part 2</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Learn Multiplication">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part2.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Learn Multiplication</h1>
+			<h2>/ Assignment 4 Part 2</h2>
+		</header>
+		<a href="/hw4/index.html">🡸 Back to Assignment 4 List</a>
+		<br>
+		
+		<p>A web page to teach kids about multiplication tables from 5 to 9. There are 5 tables presented, one below the other, showing the multiplication of the numbers - 1 table for each multiplier from 5 to 9.</p>
+		<p>the first column of each table, shows numbers from 1 to 9. The second column of each table (multiplier) shows the multiplier being used to build that specific table. The third column shows the result of the number column multiplied by the multiplier column.</p>
+
+		<!-- Div for JS to make tables in -->
+		<div id="tables" class="grid-container" style="grid-template-columns:33.3% 33.3% 33.3%"></div>
+
+		<script>
+			for(let h=5; h<=9; h++){
+				makeTable(1, 9, h, "tables");
+			}
+		</script>
+	</main>
+</body>
+
+</html>

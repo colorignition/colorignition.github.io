@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 4 Part 3</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Learn Multiplication">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part3.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Asterisk Square</h1>
+			<h2>/ Assignment 4 Extra Credit</h2>
+		</header>
+		<a href="/hw4/index.html">🡸 Back to Assignment 4 List</a>
+		<br>
+		
+		<p>Displays a hollow square constructed of asterisks, that reads the size typed by the user.</p>
+
+		<div class="grid-container" style="grid-template-columns:40% 60%">
+			<div>
+				<h2>Input</h2>
+				<p>Note: Size must be between <b>2 to 10!</b></p>
+
+				<form id="form">
+					<div class="grid-container" style="grid-template-columns:20% 40%">
+						<label for="in-size">Size</label>
+						<input type="number" name="size" id="in-size">
+					</div>
+					<input type="button" value="Submit" onclick="processForm()">
+					<input type="reset" value="Reset">
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad">
+					<p id="output" style="white-space: pre; line-height: 22px; text-align: justify;"></p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+		</script>
+	</main>
+</body>
+
+</html>

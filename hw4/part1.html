@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 4 Part 1</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Loop Product & Sum">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part1.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Loop Product & Sum</h1>
+			<h2>/ Assignment 4 Part 1</h2>
+		</header>
+		<a href="/hw4/index.html">🡸 Back to Assignment 4 List</a>
+		<br>
+		
+		<p>Contains a script, using the for statement, that calculates the product and sum of every fourth integer from 5 to 25 inclusive and then displays the results, along with some accompanying text.</p>
+		<p>Also contains another script, using the while or do while statement, that calculates the product and sum of every third integer from 3 to 18 inclusive and then displays the results, along with some accompanying text.</p>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Output 1</h2>
+				<p><b>For</b> Statement</p>
+				<div class="div-pad">
+					<p id="output1a"></p>
+					<p id="output1b"></p>
+				</div>
+
+				<script>loop_for(5, 25, 4)</script>
+			</div>
+
+			<div>
+				<h2>Output 2</h2>
+				<p><b>Do-While</b> Statement</p>
+				<div class="div-pad">
+					<p id="output2a"></p>
+					<p id="output2b"></p>
+				</div>
+
+				<script>loop_dowhile(3, 18, 3)</script>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

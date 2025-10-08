@@ -29,8 +29,7 @@
 		
 		<p>This form accepts three numbers and provides the <b>sum, average, and product</b> of the three numbers, as well as provides the <b>smallest and largest</b> of the three numbers.</p>
 
-		<div class="grid-container" style="grid-template-columns:40% 40% 20%">
-
+		<div class="grid-container" style="grid-template-columns:auto auto">
 			<div>
 				<h2>Input</h2>
 				<form>
@@ -54,6 +53,9 @@
 
 			<div>
 				<h2>Output</h2>
+
+				<div class="div-pad" id="output">Awaiting input...</div> <br>
+
 				<div class="grid-container" style="grid-template-columns:25% 20%">
 					<label>Sum</label>
 					<input type="text" id="out_sum" readonly>
@@ -71,13 +73,7 @@
 					<input type="text" id="out_max" readonly>
 				</div>
 			</div>
-			
-			<div>
-				<h2>Alert</h2>
-				<div class="div-pad" id="output">Awaiting input...</div>
-			</div>
 		</div>
-		
 	</main>
 </body>
 
