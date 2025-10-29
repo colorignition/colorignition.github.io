@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 5 Part 1</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part1.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Movie Form</h1>
+			<h2>/ Assignment 5 Part 1</h2>
+		</header>
+		<a href="/hw5/index.html">🡸 Back to Assignment 5 List</a>
+		<br>
+		
+		<p>A form that contains:
+		<ul class="ul-dot">
+			<li>An input text box for a full name</li>
+			<li>A group of radio buttons so for age group (less than 21; between 21 and 50; older than 50)</li>
+			<li>A group of checkboxes for browsers used (Firefox, Edge, Chrome, Safari)</li> 
+			<li>A select element or datalist (to produce a drop-down list of choices) for genre of movie preferred (Action, Comedy, Drama, Documentary, Science Fiction)</li>
+		</ul>
+		</p>
+		<p>The page will validate whether the user has entered data in the input text box, AND has checked one of the radio buttons, AND has checked at least one checkbox, AND has selected an option from the list of options in the select (or datalist) element.</p>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Input</h2>
+				<form id="form">
+					<div class="grid-container" style="grid-template-columns:40% 55%;">
+						<label for="in-name">Full Name</label>
+						<input type="text" id="in-name" name="in-name">
+
+						<label>Age</label>
+						<div>
+							<input type="radio" id="in-age-lt21" name="in-age" value="in-age-lt21">
+							<label for="in-age-lt21">Less than 21</label><br>
+
+							<input type="radio" id="in-age-lt50" name="in-age" value="in-age-lt50">
+							<label for="in-age-lt50">Between 21 and 50</label><br>
+
+							<input type="radio" id="in-age-gt50" name="in-age" value="in-age-gt50">
+							<label for="in-age-gt50">Greater than 50</label><br>
+						</div>
+
+						<label>Browsers</label>
+						<div>
+							<input type="checkbox" id="in-br-frfx" name="in-br" value="in-br-frfx">
+							<label for="in-br-frfx">Mozilla Firefox</label><br>
+
+							<input type="checkbox" id="in-br-edge" name="in-br" value="in-br-edge">
+							<label for="in-br-edge">Microsoft Edge</label><br>
+
+							<input type="checkbox" id="in-br-chrm" name="in-br" value="in-br-chrm">
+							<label for="in-br-chrm">Google Chrome</label><br>
+
+							<input type="checkbox" id="in-br-sfri" name="in-br" value="in-br-sfri">
+							<label for="in-br-sfri">Apple Safari</label><br>
+						</div>
+
+						<label for="in-genre">Movie Genre</label>
+						<select name="in-genre" id="in-genre">
+							<option value="in-genre-act">Action</option>
+							<option value="in-genre-com">Comedy</option>
+							<option value="in-genre-dra">Drama</option>
+							<option value="in-genre-doc">Documentary</option>
+							<option value="in-genre-sfi">Science Fiction</option>
+						</select>
+					</div>
+					<br>
+					<input type="button" value="Submit" onclick="processForm()">
+					<input type="reset" value="Reset">
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad">
+					<p id="output"></p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

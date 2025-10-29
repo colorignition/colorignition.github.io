@@ -30,7 +30,7 @@
 		<p>the first column of each table, shows numbers from 1 to 9. The second column of each table (multiplier) shows the multiplier being used to build that specific table. The third column shows the result of the number column multiplied by the multiplier column.</p>
 
 		<!-- Div for JS to make tables in -->
-		<div id="tables" class="grid-container" style="grid-template-columns:33.3% 33.3% 33.3%"></div>
+		<div id="tables" class="grid-container" style="grid-template-columns:repeat(2, 1fr)"></div>
 
 		<script>
 			for(let h=5; h<=9; h++){

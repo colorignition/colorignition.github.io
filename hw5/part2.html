@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 5 Part 2</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="State Information">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part2.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>State Information</h1>
+			<h2>/ Assignment 5 Part 2</h2>
+		</header>
+		<a href="/hw5/index.html">🡸 Back to Assignment 5 List</a>
+		<br>
+		
+		<p>Please type the FULL NAME or ABBREVIATION of the state desired to get information. The input does not follow any type of pre-determined capitalization. After clicking the button to get "State Info", the page will verify if the state that was inputted exists in the database.</p>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Input</h2>
+				<form id="form">
+					<div class="grid-container" style="grid-template-columns:40% 55%;">
+						<label for="in-state">State Name or Abbreviation</label>
+						<input type="text" id="in-state" name="in-state">
+					</div>
+					<br>
+					<input type="button" value="Submit" onclick="processForm();">
+					<input type="reset" value="Reset">
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad">
+					<p id="out-msg"></p>
+					<br>
+
+					<div id="out-results" class="grid-container" style="grid-template-columns:30% 65%;">
+						<label>Abbreviation</label>
+						<input type="text" id="out-abbr" readonly>
+
+						<label>Name</label>
+						<input type="text" id="out-name" readonly>
+
+						<label>Capital</label>
+						<input type="text" id="out-cap" readonly>
+
+						<label>Population</label>
+						<input type="text" id="out-popl" readonly>
+					</div>
+				</div>
+
+				<script>
+					makeSLS();
+					hideResults();
+				</script>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
