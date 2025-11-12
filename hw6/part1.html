@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 6 Part 1</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Convert a number to float numbers of different formats.">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part1.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Float Formatting</h1>
+			<h2>/ Assignment 6 Part 1</h2>
+		</header>
+		<a href="/hw6/index.html">🡸 Back to Assignment 6 List</a>
+		<br>
+		
+		<p>After the user types the number (with at least 4 decimal positions) in the input box and clicks on the button to submit:</p>
+		<ul class="ul-dot">
+			<li>round the floating-point number to the nearest integer</li>
+			<li>calculate the square root of the floating-point number and round it to an integer)</li>
+			<li>round the floating-point number to the nearest tenths position</li> 
+			<li>round the floating-point number to the nearest hundredths position</li>
+			<li>round the floating-point number to the nearest thousandths position</li>
+		</ul>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Input</h2>
+				<form id="form">
+					<div class="grid-container" style="grid-template-columns:40% 55%;">
+						<label for="in-num">Number</label>
+						<input type="text" id="in-num" name="in-num">
+					</div>
+					<br>
+					<input type="button" value="Submit" onclick="processForm();">
+					<input type="reset" value="Reset">
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad">
+					<p id="out-msg"></p>
+					<br>
+
+					<div id="out-results" class="grid-container" style="grid-template-columns:40% 55%;">
+						<label>Unmodified</label>
+						<input type="text" id="out-input" readonly>
+
+						<label>Integer</label>
+						<input type="text" id="out-int" readonly>
+
+						<label>Square Root, Integer</label>
+						<input type="text" id="out-sqrt" readonly>
+
+						<label>Float, 10th</label>
+						<input type="text" id="out-fl1" readonly>
+
+						<label>Float, 100th</label>
+						<input type="text" id="out-fl2" readonly>
+
+						<label>Float, 1000th</label>
+						<input type="text" id="out-fl3" readonly>
+					</div>
+				</div>
+
+				<script>
+					hideResults();
+				</script>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 5 Part 2</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="The page will search for the character inside the content in the text area and will count how many times this character is shown in the big content.">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+	<script src="part2.js"></script>
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Character Search</h1>
+			<h2>/ Assignment 6 Part 2</h2>
+		</header>
+		<a href="/hw6/index.html">🡸 Back to Assignment 6 List</a>
+		<br>
+		
+		<p>Please type any content in the text area for the long content, and then type a single character in the input box provided.</p>
+
+		<p>The page will search for the character inside the content in the text area and will count how many times this character is shown in the big content.</p>
+
+		<p>If the character is found, a message will be presented in the output/result area that says how many times the character shows up in the content. If the character is not found, a new window is presented with an error message.</p>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Input</h2>
+				<form id="form">
+					<div class="grid-container" style="grid-template-columns:25% 70%;">
+						<label for="in-content">Large Content</label>
+						<textarea id="in-content" name="in-content" rows="10" cols="50"></textarea>
+
+						<label for="in-char">Search Character</label>
+						<input type="text" id="in-char" name="in-char" maxlength="1">
+					</div>
+					<br>
+					<input type="button" value="Submit" onclick="processForm();">
+					<input type="reset" value="Reset">
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad">
+					<p id="out-msg"></p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

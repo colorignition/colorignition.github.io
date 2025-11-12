@@ -75,7 +75,7 @@ label {
 	font-size: 100%;
 }
 
-input, select {
+input, select, textarea {
 	margin-bottom: 8px;
 	font-size: 100%;
 }
@@ -110,17 +110,17 @@ a:hover {
 	color: white;
 }
 
-input, select {
+input, select, textarea {
 	border-style: solid;
 	border-color: rgb(10, 10, 10);
 	background-color: rgb(30, 30, 30);
 }
 
-input:hover, select:hover {
+input:hover, select:hover, textarea:hover {
 	background-color: rgb(80, 80, 80);
 }
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
 	background-color: rgb(60, 60, 60);
 }
 
