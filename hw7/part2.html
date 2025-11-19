@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 7 Part 2</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="If it is the first time the user is opening the page, the page will present a form for the user to type names. If it is not the first time the user is opening the page, the page will just display a message of Welcome Back followed by the name of the user.">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Cookies</h1>
+			<h2>/ Assignment 7 Part 2</h2>
+		</header>
+		<a href="/hw7/index.html">🡸 Back to Assignment 7 List</a>
+		<br>
+		
+		<p>A web page that will save TWO pairs of cookies for the same page - one of the pairs for the name of the user and another one for the username of the user. Both cookies are deleted when the user ends the seesion by closing the browser (not simply closes the tab/window).</p>
+
+		<p>If it is the first time the user is opening the page on the browser, the page will present a form for the user to type his/her name and his/her username.</p>
+
+		<p>If it is not the first time the user is opening the page (if he/she is revisiting the page) while the browser is still opened, the page will just display a message of Welcome Back followed by the name of the user that the page retrieves from the previously saved cookie.</p>
+
+		<div id="alert" class="div-pad"></div>
+
+		<div id="new-user">
+			<h2>New User</h2>
+			<form id="in-form">
+				<div class="grid-container" style="grid-template-columns:25% 70%;">
+					<label for="in-pname">Personal Name</label>
+					<input type="text" id="in-pname" name="in-pname">
+
+					<label for="in-uname">Username</label>
+					<input type="text" id="in-uname" name="in-uname">
+				</div>
+				<br>
+				<input type="button" value="Submit" onclick="processForm();">
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+
+		<div id="ret-user">
+			<h2>Returning User</h2>
+			<p id="out-msg"></p>
+			<!-- 
+			// This button works if the cookies have expiry dates
+			<input type="button" value="Clear Cookies" onclick="clearAllCookies();">
+			 -->
+		</div>
+	</main>
+
+	<script src="part2.js"></script>
+	<script>updatePage();</script>
+</body>
+
+</html>

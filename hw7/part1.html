@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript/Ajax Programming Assignment 7 Part 1</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="While the user selects the styles available, the page will immediately apply the changes to the relevant styles.">
+	<meta name="keywords" content="HTML5, CSS, JavaScript, Ajax">
+	<meta name="author" content="colorignition">
+
+	<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+	<!-- Side Nav -->
+	<script id="navbar" src="/nav.js"></script>
+
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>Style Picker</h1>
+			<h2>/ Assignment 7 Part 1</h2>
+		</header>
+		<a href="/hw7/index.html">🡸 Back to Assignment 7 List</a>
+		<br>
+		
+		<p>While the user selects the styles available, the page will immediately apply the changes to the relevant styles.</p>
+
+		<div class="grid-container" style="grid-template-columns:50% 50%">
+			<div>
+				<h2>Input</h2>
+				<form id="in-form">
+					<div class="grid-container" style="grid-template-columns:40% 55%;">
+
+						<label>Theme</label>
+						<div>
+							<input type="radio" id="in-bgclr-0" name="in-bgclr" value="0" checked>
+							<label for="in-bgclr-0">Dark Theme (Default)</label><br>
+
+							<input type="radio" id="in-bgclr-1" name="in-bgclr" value="1">
+							<label for="in-bgclr-1">Light Theme</label><br>
+
+							<input type="radio" id="in-bgclr-2" name="in-bgclr" value="2">
+							<label for="in-bgclr-2">High Contrast Theme</label><br>
+						</div>
+
+						<label>Font Styling</label>
+						<div>
+							<input type="checkbox" id="in-fStyle-ul" name="in-fStyle" value="in-fStyle-ul">
+							<label for="in-fStyle-ul">Underline</label><br>
+
+							<input type="checkbox" id="in-fStyle-bd" name="in-fStyle" value="in-fStyle-bd">
+							<label for="in-fStyle-bd">Bold</label><br>
+
+							<input type="checkbox" id="in-fStyle-it" name="in-fStyle" value="in-fStyle-it">
+							<label for="in-fStyle-it">Italic</label><br>
+						</div>
+
+						<label for="in-fsize">Font Size</label>
+						<select name="in-fsize" id="in-fsize">
+							<option value="0">100% (Default)</option>
+							<option value="1">120%</option>
+							<option value="2">150%</option>
+							<option value="3">200%</option>
+						</select>
+					</div>
+				</form>
+			</div>
+
+			<div>
+				<h2>Output</h2>
+				<div class="div-pad" id="out-div">
+					<p id="out-p">Hong Kong milk tea, also called "silk stocking tea" due to its ultra-smooth texture, has a bold and velvety taste achieved by blending multiple black tea varieties, including Ceylon black tea and orange pekoe, with evaporated or condensed milk. Hong Kong-style milk tea undergoes a meticulous straining process, traditionally using a cloth filter (often called a "sock"), to create its signature smoothness and intense tea flavor. This method of preparation is one of the key steps that defines Hong Kong–style milk tea and often involves letting the tea simmer briefly in a saucepan or kettle before straining, to extract a deeper aroma. Whether you’re sipping a hot or iced cup of Hong Kong milk tea, the depth of flavor offers something uniquely satisfying.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="part1.js"></script>
+	<script>updateDiv();</script>
+</body>
+
+</html>
