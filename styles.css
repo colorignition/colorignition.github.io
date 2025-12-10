@@ -75,9 +75,13 @@ label {
 	font-size: 100%;
 }
 
-input, select, textarea {
+input, select, textarea, button {
 	margin-bottom: 8px;
 	font-size: 100%;
+}
+
+button {
+	padding: 6px 9px;
 }
 
 table {
@@ -110,17 +114,17 @@ a:hover {
 	color: white;
 }
 
-input, select, textarea {
+input, select, textarea, button {
 	border-style: solid;
 	border-color: rgb(10, 10, 10);
 	background-color: rgb(30, 30, 30);
 }
 
-input:hover, select:hover, textarea:hover {
+input:hover, select:hover, textarea:hover, button:hover {
 	background-color: rgb(80, 80, 80);
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, button:hover {
 	background-color: rgb(60, 60, 60);
 }
 
