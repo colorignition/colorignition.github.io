@@ -9,7 +9,7 @@
 }
 
 html {
-	background-image: url("red_nebula.jpg");
+	background-image: url("bg.jpg");
 	background-size: cover;
 }
 
@@ -18,7 +18,8 @@ body {
 }
 
 main {
-	margin-left: 17.7%;
+	margin-left: 18em;
+	width: 64em;
 	padding: 10px 10%;
 	padding-bottom: 40px;
 
@@ -45,7 +46,7 @@ h1, h2, h3, h4, p {
 	margin: 9px 0;
 }
 
-header{
+header, footer {
 	display: flex;
 	align-items: flex-end;
 }
@@ -58,12 +59,12 @@ header h2, header h3 {
 /* - Structures */
 
 ul {
-	list-style-type: none;
-}
-
-.ul-dot {
 	list-style-type: circle;
 	list-style-position: inside;
+}
+
+.ul-nostyle {
+	list-style-type: none;
 }
 
 ul li{
@@ -105,7 +106,7 @@ tr:nth-child(even) {
 /* - Interactables */
 
 a {
-	color: lightpink;
+	color: lightskyblue;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -142,6 +143,10 @@ input[type="number"] {
 
 /* CLASSES */
 
+.link-button {
+	list-style-type: none;
+}
+
 .link-button a {
 	display: block;
 }
@@ -154,7 +159,8 @@ input[type="number"] {
 }
 
 .link-button a:hover, input[type=button]:hover, input[type=reset]:hover{
-	background-color: rgb(250, 80, 80);
+	background-color: lightskyblue;
+	color: black;
 }
 
 .grid-container {
@@ -166,7 +172,7 @@ input[type="number"] {
 
 nav {
 	position: fixed;
-	width: 12.06%;
+	width: 15em;
 	
 	z-index: 1;
 
