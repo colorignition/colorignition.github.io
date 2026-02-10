@@ -14,16 +14,21 @@ html {
 }
 
 body {
-	padding: 2% 16%;
+
 }
 
 main {
-	margin-left: 18em;
-	width: 64em;
-	padding: 10px 10%;
-	padding-bottom: 40px;
+	margin: 2em 8em;
+	padding: 2em 8em;
 
 	background-color: rgba(50, 50, 50, 0.95);
+}
+
+@media screen and (max-width: 1500px) {
+	main {
+		margin: 2em 0em;
+		padding: 2em 4em;
+	}
 }
 
 h1 {
@@ -116,17 +121,19 @@ a:hover {
 }
 
 input, select, textarea, button {
-	border-style: solid;
-	border-color: rgb(10, 10, 10);
+	border-style: none;
+	padding: 0.8em 1.2em;
 	background-color: rgb(30, 30, 30);
 }
 
 input:hover, select:hover, textarea:hover, button:hover {
-	background-color: rgb(80, 80, 80);
+	background-color: lightskyblue;
+	color: black;
 }
 
 input:focus, select:focus, textarea:focus, button:hover {
-	background-color: rgb(60, 60, 60);
+	background-color: lightskyblue;
+	color: black;
 }
 
 /* Hide the spin buttons in WebKit browsers */
