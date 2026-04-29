@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>PWA Demo</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Demo of PWA and service workers">
+	<meta name="keywords" content="HTML5, CSS, PWA">
+	<meta name="author" content="colorignition">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/x-icon" href="/images/icon_64.ico">
+	<link rel="stylesheet" href="styles.css">
+
+	<link rel="manifest" href="manifest.json">
+	<script>
+		window.addEventListener('load', () => {
+			registerSW();
+		});
+
+		// Register the Service Worker
+		async function registerSW() {
+			if ('serviceWorker' in navigator) {
+				try {
+					await navigator
+						.serviceWorker
+						.register('serviceworker.js');
+				}
+				catch (e) {
+					console.log('SW registration failed');
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>HW 4</h1>
+			<h2>PWA Demo</h2>
+		</header>
+
+		<div>
+			<h3>About Progressive Web Applications (PWAs)</h3>
+			<p>A Progressive Web Application (PWA) is a type of web application that is installed on a device, or more specifically, the offline cache of a web browser. PWAs are different from native apps in that they are built using coding language for browsers (HTML, CSS, JavaScript, etc.), and therefore are able to run on any device with a web browser, unlike native apps which are built specifically for their target platforms and are not easily ported. PWAs are also more advantageous to web-only apps because of its integration into web browsers, allowing for more richer experiences.</p>
+			<p>PWAs are generally reliable, fast, and engaging. PWAs are reliable because they are able to load itself with common resources that have been cached offline, reducing reliance on network connection. PWAs are also fast because of the same reason; there is much less waiting time because the app can quickly load most assets from local storage and therefore the amount of loading from the network is kept to a minimum. Finally, the PWAs are engaging because they offer a similar experience to a native app, with many features and access to web push notifications.</p>
+			<br>
+
+			<h3>Demo: Changing the Background</h3>
+			<p>Use the bottom dropdown menu to change the background.</p>
+			<form>
+				<label for="bg">Background Image</label>
+				<select name="bg" id="bg">
+					<option value="0">White (Default)</option>
+					<option value="1">Silver Lights</option>
+					<option value="2">Gold Lights</option>
+				</select>
+			</form>
+			<br>
+
+			<h3>Credits</h3>
+			<ul>
+				<li>App icon by Robert Angle: <a href="https://www.flaticon.com/free-icon/page_9132826" target="_blank">Link to Download</a></li>
+			</ul>
+		</div>
+		
+	</main>
+
+	<script src="hw4.js"></script>
+</body>
+
+</html>

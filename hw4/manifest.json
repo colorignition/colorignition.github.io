@@ -1,0 +1,22 @@
+{
+    "name":"PWA Demo",
+    "short_name":"PWAD",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"#5900b3",
+    "theme_color":"black",
+    "scope": ".",
+    "description":"This is a PWA demo.",
+    "icons":[
+    {
+        "src":"images/icon_128.png",                      
+        "sizes":"128x128",
+        "type":"image/png"
+    },
+    {
+        "src":"images/icon_512.png",
+        "sizes":"512x512",
+        "type":"image/png"
+    }
+  ]
+}
