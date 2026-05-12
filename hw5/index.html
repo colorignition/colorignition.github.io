@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Frameworks for Cross-Platform Mobile App Development</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Details for frameworks for Cross Platform Application Development">
+	<meta name="keywords" content="HTML5, CSS, Flutter, Ionic, React Native">
+	<meta name="author" content="colorignition">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.container {
+			display: grid;
+			grid-template-columns: repeat(12, [col-start] 1fr);
+			gap: 0.2em;
+		}
+
+		.img_logo {
+			width: 12em;
+			height: 12em;
+		}
+
+		.container > * {
+			grid-column: col-start / span 12;
+			padding: 0.1em;
+		}
+
+		
+		@media (min-width: 768px) {
+			.c_title {
+				grid-column: col-start / span 12;
+			}
+
+			.c_desc {
+				grid-column: col-start / span 10;
+			}
+			
+			.img_logo {
+				grid-column: col-start 11 / span 2;
+			}
+		}
+		
+	</style>
+
+	<script>
+		window.addEventListener('load', () => {
+			registerSW();
+		});
+
+		// Register the Service Worker
+		async function registerSW() {
+			if ('serviceWorker' in navigator) {
+				try {
+					await navigator
+						.serviceWorker
+						.register('serviceworker.js');
+				}
+				catch (e) {
+					console.log('SW registration failed');
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<!-- Main -->
+	<main>
+		<header>
+			<h1>HW5</h1>
+			<h2>Frameworks for Cross-Platform Mobile App Development</h2>
+		</header>
+
+		<hr>
+
+		<div class="container">
+			<br>
+			<h3 class="c_title">◈ About</h3>
+			<div>
+				<p>To develop for mobile applications, software developers use a single framework that can adapt to different platforms, such as iOS or Android, without the need to write specific code for each platform case. Having one framework allows for a single codebase which reduces complexity and the need for maintenance. Below are some common app development frameworks being used today.</p>
+			</div>
+			<br>
+
+			<h3 class="c_title">◈ Flutter</h3>
+			<div class="c_desc">
+				<p>Flutter is an app development framework released by Google in 2017. A special function of Flutter is the ability to view code changes during a live simulation of the app without the need for recompilation, allowing for quicker development. Flutter also supports Google's Material Design, which is a system of UI elements which can be easily implemented. Finally, Flutter does not rely on webpage rendering and uses its own rendering engine to draw its elements, which can improve app usage stability and responsiveness. Currently, Flutter has a large userbase and seems to be trending upwards in adoption.</p>
+				
+				<h4>Coding Language</h4> 
+				<p>Dart (Google's own coding language)</p>
+				
+				<h4>Examples</h4>
+				<ul>
+					<li>Google's own apps</li> 
+					<li>Ebay</li>
+					<li>WeChat</li>
+					<li>Alibaba</li>
+					<li>ByteDance apps (TikTok, CapCut, etc)</li>
+				</ul>
+			</div>
+			<img class="img_logo" src="images/logo_flutter.png" alt="Logo for Flutter">
+			<br>
+
+			<h3 class="c_title">◈ Ionic</h3>
+			<div class="c_desc">
+				<p>Ionic is a UI toolkit released in 2013 under an open-source license. It is based on a SaaS framework designed specifically for mobile OS and provides many UI components for use in development. Ionic uses the Cordova and Capacitor plugins to access phone hardware, such as cameras or microphones. To develop using Ionic, developers will use the Ionic Command Line Interface (CLI). Ionic sees a fairly good amount of activity and support from many developers.</p>
+				
+				<h4>Coding Language</h4> 
+				<p>JavaScript</p>
+				
+				<h4>Examples</h4>
+				<ul>
+					<li>Target</li> 
+					<li>Southwest Airlines</li>
+					<li>T-Mobile</li>
+					<li>H&R Block</li>
+				</ul>
+			</div>
+			<img class="img_logo" src="images/logo_ionic.png" alt="Logo for Flutter">
+			<br>
+
+			<h3 class="c_title">◈ React Native</h3>
+			<div class="c_desc">
+				<p>React Native is an open-source software UI framework developed by Meta (formerly Facebook) in 2015. React Native's main focus is making the UI as native to each platform's case as possible by translating code into said platform's native UI elements. Similarly to Flutter, React Native's Fast Refresh feature allows developers to immediately view code changes in their app simulation. React Native also has integration with Flipper, which is a mobile app debug platform that bundles many useful functions in, like a log viewer, network log, and interactive layout viewer. React Native sees huge popularity and has a huge userbase.</p>
+				
+				<h4>Coding Language</h4> 
+				<p>JavaScript</p>
+				
+				<h4>Examples</h4>
+				<ul>
+					<li>Meta's own apps (Facebook, Instagram, etc.)</li> 
+					<li>Microsoft Office</li>
+					<li>Amazon</li>
+					<li>Tesla</li>
+					<li>Discord</li>
+				</ul>
+			</div>
+			<img class="img_logo" src="images/logo_reactnative.png" alt="Logo for Flutter">
+			<br>
+		</div>
+		
+	</main>
+</body>
+
+</html>
